@@ -1,0 +1,43 @@
+﻿Credit Rating
+
+What is a 'Credit Rating'
+A credit rating is an assessment of the creditworthiness of a borrower in general terms or with respect to a particular debt or financial obligation. A credit rating can be assigned to any entity that seeks to borrow money — an individual, corporation, state or provincial authority, or sovereign government.
+
+Credit assessment and evaluation for companies and governments is generally done by a credit rating agency such as Standard & Poor’s (S&P), Moody’s, or Fitch. These rating agencies are paid by the entity that is seeking a credit rating for itself or for one of its debt issues.
+
+Next Up
+CREDIT REPORTING AGENCY
+CREDIT SCORE
+GOOD CREDIT
+CREDIT LIMIT
+BREAKING DOWN 'Credit Rating'
+A loan is essentially a promise, and a credit rating determines the likelihood that the borrower will pay back a loan within the confines of the loan agreement, without defaulting. A high credit rating indicates a high possibility of paying back the loan in its entirety without any issues; a poor credit rating suggests that the borrower has had trouble paying back loans in the past, and might follow the same pattern in the future. The credit rating affects the entity's chances of being approved for a given loan or receiving favorable terms for said loan.
+
+Credit ratings apply to businesses and government, while credit scores apply only to individuals. Credit scores are derived from the credit history maintained by credit-reporting agencies such as Equifax, Experian, and TransUnion. An individual's credit score is reported as a number, generally ranging from 300 to 850. Similarly, sovereign credit ratings apply to national governments, while corporate credit ratings apply solely to corporations.
+
+Credit rating agencies typically assign letter grades to indicate ratings. Standard & Poor’s, for instance, has a credit rating scale ranging from AAA (excellent) and AA+ to C and D. A debt instrument with a rating below BBB- is considered to be speculative grade or a junk bond, which means it is more likely to default on loans.
+
+History of Credit Ratings
+Moody's was the first agency to issue publicly available credit ratings for bonds, in 1909, and other agencies followed suit in the decades after. These ratings didn't have a profound effect on the market until 1936, when a new rule was passed that prohibited banks from investing in speculative bonds, or bonds with low credit ratings, to avoid the risk of default which could lead to financial losses. This practice was quickly adopted by other companies and financial institutions and, soon enough, relying on credit ratings became the norm.
+
+Why Credit Ratings Are Important
+Credit ratings for borrowers are based on substantial due diligence conducted by the rating agencies. While a borrowing entity will strive to have the highest possible credit rating since it has a major impact on interest rates charged by lenders, the rating agencies must take a balanced and objective view of the borrower’s financial situation and capacity to service/repay the debt.
+
+A credit rating not only determines whether or not a borrower will be approved for a loan, but also determines the interest rate at which the loan will need to be repaid. Since companies depend on loans for many start-up and other expenses, being denied a loan could spell disaster, and a high interest rate is much more difficult to pay back. Credit ratings also play a large role in a potential investor's determining whether or not to purchase bonds. A poor credit rating is a risky investment; it indicates a larger probability that the company will be unable to make its bond payments.
+
+It is important for a borrower to remain diligent in maintaining a high credit rating. Credit ratings are never static, in fact, they change all the time based on the newest data, and one negative debt will bring down even the best score. Credit also takes time to build up. An entity with good credit but a short credit history is not seen as positively as another entity with the same quality of credit but a longer history. Debtors want to know a borrower can maintain good credit consistently over time.
+ 
+Credit rating changes can have a significant impact on financial markets. A prime example is the adverse market reaction to the credit rating downgrade of the U.S. federal government by Standard & Poor’s on August 5, 2011. Global equity markets plunged for weeks following the downgrade.
+
+Factors Affecting Credit Ratings and Credit Scores
+There are a few factors credit agencies take into consideration when assigning a credit rating to an organization. First, the agency considers the entity's past history of borrowing and paying off debts. Any missed payments or defaults on loans negatively impact the rating. The agency also looks at the entity's future economic potential. If the economic future looks bright, the credit rating tends to be higher; if the borrower does not have a positive economic outlook, the credit rating will fall.
+
+For individuals, the credit rating is conveyed by means of a numerical credit score that is maintained by Equifax, Experian, and other credit-reporting agencies. A high credit score indicates a stronger credit profile and will generally result in lower interest rates charged by lenders. There are a number of factors that are taken into account for an individual's credit score including payment history, amounts owed, length of credit history, new credit, and types of credit. Some of these factors have greater weight than others. Details on each credit factor can be found in a credit repo rt, which typically accompanies a credit score.
+
+Short-Term vs. Long-Term Credit Ratings
+A short-term credit rating reflects the likelihood of the borrower defaulting within the year. This type of credit rating has become the norm in recent years, whereas, in the past, long-term credit ratings were more heavily considered. Long-term credit ratings predict the borrower's likelihood of defaulting at any given time in the extended future.
+
+
+
+Read more: Credit Rating | Investopedia https://www.investopedia.com/terms/c/creditrating.asp#ixzz5XNVpALRU 
+Follow us: Investopedia on Facebook
