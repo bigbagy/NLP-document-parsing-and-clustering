@@ -112,7 +112,7 @@ generate 2-D scatter plot, each point represents one file, points are colored ba
 
 Step 10, generate analysis report
 
-generate and save "analysis.txt" to project folder
+generate and save "analysis.txt" to src folder
 
 
 ### Acceptable file format in "files" folder
