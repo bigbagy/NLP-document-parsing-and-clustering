@@ -18,7 +18,7 @@ Other required python dependencies are listed in requirement.txt
 Install the pre-requisite packages, then use the following command line:
 
 ```
-python3 run.py
+python3.6 run.py
 ```
 
 the program will automatically start the workflow
