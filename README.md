@@ -31,26 +31,18 @@ Step 1, load all documents under "files" folder
 
 open files and parse plain text, return plain texts and file names
 
-
-Step 2, extract and print phone number
-
-(calling parse_phone.py)
-
-use regex to extract phone nuber from plain texts, print out phone number if found
-
-
-Step 3, determine document language
+Step 2, determine document language
 
 (calling get_language.py)
 
 detect language of text string (using langdetect). To speed-up for large files, only use first 1000 characters to decide file language 
 
 
-Step 4, dealing with non-english files
+Step 3, dealing with non-english files
 
 Here we need to make a decision, how to handle German and French files
 
-Since majority of files are in Englih, minority German and French files will become outliers when we do tf-idf based clustering study (french/german files have no word match with majority of word-space). 
+If majority of files are in Englih, minority German and French files will become outliers after tf-idf, (french/german files have no word match with majority of word-space). 
 
 There are several options to resolve this:
 
@@ -65,7 +57,7 @@ There are several options to resolve this:
 For simplicity reason, this excercise will only do option 1, i.e. only cluster English files and ignore other language files
 
 
-Step 5, extract proper nouns using POS
+Step 4, extract proper nouns using POS
 
 (calling proper_nouns.py)
 
