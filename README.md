@@ -40,7 +40,7 @@ the program will automatically start and finish the workflow
 
 Step 1, open and parse all documents located inside "/src/files" folder 
 
-a dedicated parser is used to parse plain text from txt, docx, pptx, pdf files, return plain texts and file names
+a dedicated parser is used to parse any text from txt, docx, pptx, pdf files, return plain texts and file names
 
 Step 2, determine document language
 
