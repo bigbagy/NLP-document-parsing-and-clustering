@@ -1,5 +1,5 @@
 # NLP-document-auto-clustering
-auto text extraction and clustering using document parsers, POS tokenization, TF-IDF, PCA and K-means
+NLP auto text extraction and clustering using document parsers, POS tokenization, TF-IDF, PCA and K-means
 
 ### Prerequisites
 
