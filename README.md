@@ -70,7 +70,7 @@ reduce word-space by normalizing proper-noun words to stem form, first stemming,
 
 Step 6, vectorize word space with tf-idf 
 
-form overall corpus by combine file keywords, then vectorize word-space via tf-idf
+form overall corpus by combining file keywords, then vectorize word-space via tf-idf
 
 Step 7, K-means clustering
 
