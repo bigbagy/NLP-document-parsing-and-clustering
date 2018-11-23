@@ -1,12 +1,18 @@
 # NLP-document-auto-clustering
 
-features:
+Key features:
 
-A complete and automated document clustering tool
+- Support most common document formats including pdf, word docx, powerpoint pptx, txt
 
-can process most common document file formats including txt, docx, pptx, pdd
+- Auto-detection of file language
 
-use of NLP POS tokenization, TF-IDF, PCA and K-means
+- NLP based POS tagging and word tokenization
+
+- TF-IDF vecterization
+
+- K-means clustering with auto K selection
+
+- PCA and 2-D visualization
 
 ### Prerequisites
 
@@ -22,7 +28,7 @@ Other python dependencies can be found in requirement.txt
 
 ### How to run the code
 
-First install the pre-requisite packages, then use the following command line:
+The run.py file is under "/src" folder.  First install the pre-requisite packages, then use the following command line:
 
 ```
 python3.6 run.py
@@ -38,29 +44,25 @@ a dedicated parser is used to parse plain text from txt, docx, pptx, pdf files, 
 
 Step 2, determine document language
 
-auto-detect language of text string (using langdetect)
+auto-detect language of text string using langdetect
 
 Step 3, dealing with non-english files
 
 there are several options to handle foreign language files
 
-If majority of files are in Englih, minority foreign language files will become outliers after tf-idf, (eg those french/german files will have no word match with majority of word-space). 
+option 1. remove foreign languages and only keep English files for clustering study
 
-There are several options to resolve this:
+option 2. perform separate clustering study, one for each language
 
-1. We can remove french and german files from clustering study(somewhat equivalent to removing outliers)
+Option 3. translate foreign language text to English (using goslate or similar package), then treat the traslated content as English text
 
-2. we can do 3 separate clustering study, one for each language
+Option 4. use word embedding to convert word space to abstract vector space (such as Word2Vec), then cluster files based on abstract vector space
 
-3. we can translate German/French text to English (using goslate or similar package), then treat the traslated content as English text
+currently support option 1, i.e. only cluster English files.  More features could be added in future to support other options.
 
-4. we can do word embedding to convert words to abstract vectors (such as word2Vec), then the actual spelling of words won't matter, if we do clustering in abstract vector space.  (need word embedding modules that support French and German)
+Step 4, extract key words from text using POS
 
-Currently support option 1, i.e. only cluster English files and ignore other language files.  More features could be added to support other options.
-
-Step 4, extract proper nouns using POS
-
-tokenize plain text to get word-tokens, only keep proper nouns for clustering analysis and discard unimportant words
+tokenize plain text with NLP tokenizer, use word-tokens to filter out the key words ("proper nouns" NNP as key words)
 
 Step 5, stemming & lemmatization
 
@@ -68,31 +70,31 @@ reduce word-space by normalizing proper-noun words to stem form, first stemming,
 
 Step 6, vectorize word space with tf-idf 
 
-first form corpus by combine file proper nouns, then vectorize via tf-idf (sklearn TfidfVectorizer)
+form overall corpus by combine file keywords, then vectorize word-space via tf-idf
 
 Step 7, K-means clustering
 
-first auto-detect optimum K value using elbow method, with a pre-set threshold on elbow gradient: see https://en.wikipedia.org/wiki/Elbow_method_(clustering)
+auto select optimum K value using elbow method, with a pre-set threshold on elbow gradient
 
-then apply K-Means using optimum k to find category label of each file
+apply K-Means clustering with optimum k and find category label for each file
 
-Note: The demo files have number of features less than 1000, dimension reduction is not necessary. However if feature number is too large, PCA maybe applied prior to k-means to reduce features dimensions
+Note: The demo files have number of features less than 1000, dimension reduction is not necessary. If large number of features cause effeciency issues, PCA could be applied prior to K-means to reduce feature dimensions
 
 Step 8, visualize clustering results in 2-D space
 
-to visualize in 20D, first need to reduce feature dimension to 2 using PCA
+reduce feature dimension to 2-D using PCA
 
-then generate 2-D scatter plot with pyplot, each point represents one file, points are colored based on cluster category
+generate 2-D scatter plot visualization, each point represents one file, points are colored based on cluster category
 
 Step 9, generate analysis report
 
-An analysis.txt report is auto-generated and save to src folder, it contins all proccessed and identified info for each file, including file name, file language, proper nouns found, and clustering category
+An analysis.txt report is auto-generated and save under "/src" folder, it contins all proccessed and identified info for each file, including file names, file languages, proper nouns found, and file clustering categories
 
 ### Acceptable file format in "files" folder
 
-All files inside files" folder will be processed by the script
+All files inside files" folder will be processed
 
-Currently most commonly found document formats can be surpoorted, including:
+Currently most common document formats are surpoorted, including:
 
 .txt (utf-8)
 
@@ -102,13 +104,13 @@ Currently most commonly found document formats can be surpoorted, including:
 
 .pptx
 
-incorrect file format may give rise to errors
+incorrect file format may give errors
 
-Currently accept English, French and German files. Other languages support can be added
+currently accept English, French and German files, other languages support can be added
 
 ### Example files for validation
 
-Some example files are provided under "src/files" for easy validation:
+Some example files are included under "src/files" for easy validation:
 
 9 separate chapters of Shelock-Holmes,		.txt (utf-8) format
 
@@ -146,27 +148,23 @@ Shelock Holmes
 
 Finance & credit
 
-The word tokenization and K-means clustering did a good job to find key words and cluster files based on content.\
+The word tokenization and K-means clustering did a good job to extract key words from files and cluster files based on content dimilarity
 
-All chapters related to the same topics are clustered correctly.
-
-Even the pdf file describing movie plot of "pride and prejudice" movie is clustered correctly with its book chapters.
-
-The 2-D visualization also gives illustration of clustering success, all nearby file points are labeled with same color, suggesting strongly that clustering algorithm did group similar points together
+The 2-D visualization gives more intuitive illustration of clustering, nearby file points are grouped to same colors, suggesting sccessful clustering
 
 ### Discussion of future improvements
 
-This project only gives a preliminary demo of what can be done, several areas can be improved in future:
+This project gives a preliminary demo of what can be done, several areas can be further improved:
 
-the file parser only accept .pdf .txt .docx .pptx formats,  more robust parsers can be built to accept more file formats and online text source text feeds such as tweeter or wiki api
+the file parser can be imrpoved to accept more file formats and to include online text sources such as tweeter/wikipedia api
 
-currently the parser can not process image contents in files, may add modules to extract text from image (such mudoles such as pytesseract)
+image text extraction module such as pytesseract can be added to the file parser to support parsing text from embedded images in files
 
-the nltk.tokenize POS tagger only support English, it works OK-ish for some european languages, but may need to find better tokenizers to better support French and German files\
+currently the nltk POS tokenizer support English, it also works OK for most european languages, but the support for foreign languages still can be improved by adding dedicated modules for foreign languages
 
-the error handling mechanism could be improved, more error hangling tests are required
+the current error handling mechanism could be improved, more error testings are needed
 
-an outlier detection/removal mechanism can be added before K-means
+outlier detection/removal mechanism can be added before K-means to improve clustering accuracy
 
 
 
