@@ -44,7 +44,7 @@ a dedicated parser is used to parse any text from txt, docx, pptx, pdf files, re
 
 Step 2, determine document language
 
-auto-detect language of text string using langdetect
+auto-detect language of file content using langdetect
 
 Step 3, dealing with non-english files
 
