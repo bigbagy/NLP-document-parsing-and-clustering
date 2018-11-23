@@ -1,5 +1,12 @@
 # NLP-document-auto-clustering
-NLP auto text extraction and clustering using document parsers, POS tokenization, TF-IDF, PCA and K-means
+
+features:
+
+A complete and automated document clustering tool
+
+can process most common document file formats including txt, docx, pptx, pdd
+
+use of NLP POS tokenization, TF-IDF, PCA and K-means
 
 ### Prerequisites
 
