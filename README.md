@@ -3,7 +3,7 @@ NLP auto text extraction and clustering using document parsers, POS tokenization
 
 ### Prerequisites
 
-written and tested with Python3.6.5 under CentOS Linux release 7.5.1804 (Core) 
+written with Python3.6.5 and tested under CentOS Linux release 7.5.1804 (Core) 
 
 Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install it manually:
 
