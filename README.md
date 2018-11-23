@@ -88,7 +88,7 @@ generate 2-D scatter plot visualization, each point represents one file, points 
 
 Step 9, generate analysis report
 
-An analysis.txt report is auto-generated and saved under "/src" folder, it contins all proccessed and identified info for each file, including file names, file languages, proper nouns found, and file clustering categories
+An analysis.txt report is auto-generated and saved under "/src" folder, it contins all proccessed info and identified info of each document file, including file names, file languages, proper nouns found, and file clustering categories
 
 ### Acceptable file format in "files" folder
 
