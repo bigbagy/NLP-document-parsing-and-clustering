@@ -38,7 +38,7 @@ the program will automatically start and finish the workflow
 
 ### Overall workflow
 
-Step 1, open and parse all documents located inside "files" folder 
+Step 1, open and parse all documents located inside "/src/files" folder 
 
 a dedicated parser is used to parse plain text from txt, docx, pptx, pdf files, return plain texts and file names
 
