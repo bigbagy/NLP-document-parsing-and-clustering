@@ -8,9 +8,9 @@ Key features:
 
 - Multi-format parser which supports all common document formats including pdf, word docx, powerpoint pptx, txt
 
-- Auto-detection of file language
+- Auto-detection of file language (support English, French, German and most European languages)
 
-- NLP based file content analysis and feature extraction (POS tagging and tokenization, support English, French, German and most European languages)
+- NLP based file content analysis and feature extractions
 
 - Visualization of file clustering results
 
