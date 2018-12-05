@@ -20,7 +20,7 @@ Key features:
 
 Python 3.6.5, dependencies can be found in requirement.txt
 
-Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install manually in CLI:
+Note: some Linux (such as CentOS 7.5.1804) is not shipped with tkinter(required by pyplot), need to install manually in CLI:
 
 For CentOS:
 ```
