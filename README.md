@@ -14,9 +14,9 @@ Key features:
 
 - Visualization of file clustering results
 
-### Prerequisites
+### Python Dependencies and Prerequisites
 
-Python dependencies can be found in requirement.txt
+Python 3.6.5, dependencies can be found in requirement.txt
 
 Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install it manually:
 
