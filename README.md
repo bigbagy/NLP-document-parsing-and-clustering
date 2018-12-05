@@ -12,6 +12,8 @@ Key features:
 
 - NLP based file content analysis and feature extractions
 
+- Fully un-supervised with auto selection of clustering threshold
+
 - Visualization of file clustering results
 
 ### Python Dependencies and Prerequisites
