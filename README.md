@@ -22,8 +22,13 @@ Python 3.6.5, dependencies can be found in requirement.txt
 
 Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install manually in CLI:
 
+For CentOS:
 ```
 sudo yum install python36u-tkinter.x86_64
+```
+For Ubuntu:
+```
+sudo apt install python36u-tkinter.x86_64
 ```
 
 ### How to run the code
@@ -31,7 +36,7 @@ sudo yum install python36u-tkinter.x86_64
 The run.py file is under "/src" folder.  First install the pre-requisite packages, then use the following command line:
 
 ```
-python3.6 run.py
+python3 run.py
 ```
 
 the program will automatically start and finish the workflow
