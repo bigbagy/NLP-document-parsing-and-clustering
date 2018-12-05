@@ -18,7 +18,7 @@ Key features:
 
 Python 3.6.5, dependencies can be found in requirement.txt
 
-Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install it manually:
+Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install manually in CLI:
 
 ```
 sudo yum install python36u-tkinter.x86_64
