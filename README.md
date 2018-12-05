@@ -12,7 +12,7 @@ Key features:
 
 ### Prerequisites
 
-written with Python3.6.5 and tested under CentOS Linux release 7.5.1804 (Core);  Ubuntu 16.0.4 (not tested)
+written with Python3.6.5 and tested under CentOS Linux release 7.5.1804 (Core); (not tested in Ubuntu 16.0.4 )
 
 Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install it manually:
 
