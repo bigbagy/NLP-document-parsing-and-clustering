@@ -38,17 +38,11 @@ The overall workflow includes file parser => language detect => process foreign 
 
 Below are step by step detailed descriptions
 
-Step 1, open and parse all documents located inside "/src/files" folder 
+Step 1, a dedicated parser is used to parse any text from txt, docx, pptx, pdf files, return plain texts and file names
 
-a dedicated parser is used to parse any text from txt, docx, pptx, pdf files, return plain texts and file names
+Step 2, auto-detect language of file content using langdetect
 
-Step 2, determine document language
-
-auto-detect language of file content using langdetect
-
-Step 3, dealing with non-english files
-
-there are several options to handle foreign language files
+Step 3, there are several options to handle foreign language files
 
 option 1. remove foreign languages and only keep English files for clustering study
 
@@ -60,21 +54,13 @@ Option 4. use word embedding to convert word space to abstract vector space (suc
 
 currently support option 1, i.e. only cluster English files.  More features could be added in future to support other options.
 
-Step 4, extract key words from text using POS
+Step 4, tokenize plain text with NLP tokenizer, use word-tokens to filter out the key words ("proper nouns" NNP as key words)
 
-tokenize plain text with NLP tokenizer, use word-tokens to filter out the key words ("proper nouns" NNP as key words)
+Step 5, reduce word-space by normalizing proper-noun words to stem form, first stemming, then lemmatization
 
-Step 5, stemming & lemmatization
+Step 6, form overall corpus by combining file keywords, then vectorize word-space via tf-idf
 
-reduce word-space by normalizing proper-noun words to stem form, first stemming, then lemmatization
-
-Step 6, vectorize word space with tf-idf 
-
-form overall corpus by combining file keywords, then vectorize word-space via tf-idf
-
-Step 7, K-means clustering
-
-auto select optimum K value using elbow method, with a pre-set threshold on elbow gradient
+Step 7, auto select optimum K value using elbow method, with a pre-set threshold on elbow gradient
 
 apply K-Means clustering with optimum k and find category label for each file
 
@@ -108,72 +94,21 @@ incorrect file format may give errors
 
 currently accept English, French and German files, other languages support can be added
 
-### Example files for validation
+### Demo files for clustering
 
-Some example files are included under "src/files" for easy validation:
-
-9 separate chapters of Shelock-Holmes,		.txt (utf-8) format
-
-21 separate chapters of Pride-and-Prejudice,		.txt (utf-8) format
-
-20 separate chapters of Tale-of-Two-Cities,		.txt (utf-8) format
-
-20 separate chapters of The-Adventures-of-Tom-Sawyer,		.txt (utf-8) format
-
-4 separate chapters of a random French book,		.txt (utf-8) format
-
-3 separate chapters of a random German book,		.txt (utf-8) format
-
-4 random texts related to finance and banking ,		.txt (utf-8) format
-
-1 powerpoint slide file related to the book of Tom-Sawyer ,	.pptx format
-
-1 pdf file related to pride and prejudice, the movie,	 .pdf format
-
-1 txt file containing some random text and Singapore phone numbers	.txt (utf-8) format
-
-In total about 80 files
-
-### Discussion of results
-
-The validation files in general fall into 5 broad categories (ignoring French and German books):
-
-Tom Sayer
-
-Pride and Prejudice
-
-Tale of Two Cities
-
-Shelock Holmes
-
-Finance & credit
-
-The word tokenization and K-means clustering did a good job to extract key words from files and cluster files based on content dimilarity
-
-The 2-D visualization gives more intuitive illustration of clustering, nearby file points are grouped to same colors, suggesting sccessful clustering
+Some example files are included under "src/files" for easy validation
 
 ### Discussion of future improvements
 
-This project gives a preliminary demo of finding patterns among unstructured random files using NLP, the code is preliminary and several areas can be improved in future:
+- This project gives a preliminary demo of finding patterns among unstructured random files using NLP, the code is preliminary and several areas can be improved in future:
 
-more features could be added to the file parser to support more input file formats, web apis could also be added to allow parsing and clustering of online contents 
+- more features could be added to the file parser to support more input file formats, web apis could also be added to allow parsing and clustering of online contents 
 
-image OCR text extraction module such as pytesseract could be implemented to the file parser to support parsing text from embedded images in pdf, pptx and word docx
+- image OCR text extraction module such as pytesseract could be implemented to the file parser to support parsing text from embedded images in pdf, pptx and word docx
 
-currently the nltk POS tokenizer has native support for English, some other european languages has been tested and it works ok, the support for foreign language can be improved by using dedicated POS tokenizers for particular language
+- currently the nltk POS tokenizer has native support for English, some other european languages has been tested and it works ok, the support for foreign language can be improved by using dedicated POS tokenizers for particular language
 
-outlier detection/removal mechanism can be added before K-means to improve clustering accuracy
+- outlier detection/removal mechanism can be added before K-means to improve clustering accuracy
 
-the current error handling mechanism could be improved, more error testings are needed
-
-
-
-
-
-
-
-
-
-
-
+- the current error handling mechanism could be improved, more error testings are needed
 
