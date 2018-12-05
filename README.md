@@ -8,7 +8,7 @@ Key features:
 
 - NLP based file processing with POS tagging and word tokenization
 
-- Visualization of clustering results in 2-D
+- Visualization of clustering results
 
 ### Prerequisites
 
