@@ -1,8 +1,8 @@
 # NLP-document-auto-clustering
 
-# written with Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu 16.0.4 )
+written with Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu 16.0.4 )
 
-# Drop any document file into a folder and auto analyse and cluster based on file contents
+### Drop any document files into a folder and this script will auto analyse and cluster them based on their related topics
 
 Key features:
 
