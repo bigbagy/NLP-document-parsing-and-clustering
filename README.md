@@ -55,13 +55,9 @@ Step 2, auto-detect language of file content using langdetect
 Step 3, there are several options to handle foreign language files
 
 option 1. remove foreign languages and only keep English files for clustering study
-
 option 2. perform separate clustering study, one for each language
-
 Option 3. translate foreign language text to English (using goslate or similar package), then treat the traslated content as English text
-
 Option 4. use word embedding to convert word space to abstract vector space (such as Word2Vec), then cluster files based on abstract vector space
-
 currently support option 1, i.e. only cluster English files.  More features could be added in future to support other options.
 
 Step 4, tokenize plain text with NLP tokenizer, use word-tokens to filter out the key words ("proper nouns" NNP as key words)
@@ -110,7 +106,7 @@ Some example files are included under "src/files" for easy validation
 
 - text embedded in images are not parsed, image OCR extraction module such as pytesseract could be added to the parser tool to support parsing text from embedded images in pdf, pptx and word docx
 
-- the nltk POS tokenizer only has native support for English, French ad German has been tested and seems to work ok, however the support for foreign language can be improved by using dedicated POS tokenizers for specific language
+- nltk POS tokenizer has native support for English;  French ad German files have been tested and works ok, however the support for foreign language can be improved by using dedicated POS tokenizers for specific language
 
 - outlier detection/removal can be fine-tuned to improve clustering accuracy
 
