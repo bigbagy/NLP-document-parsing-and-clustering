@@ -12,7 +12,7 @@ Key features:
 
 - NLP based file content analysis and feature extractions
 
-- Fully un-supervised with auto selection of clustering threshold
+- Fully un-supervised with auto selection of optimum clustering threshold
 
 - Visualization of file clustering results
 
