@@ -1,5 +1,7 @@
 # NLP-document-auto-clustering
 
+written with Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu 16.0.4 )
+
 Key features:
 
 - Support most common document formats including pdf, word docx, powerpoint pptx, txt
@@ -12,15 +14,13 @@ Key features:
 
 ### Prerequisites
 
-written with Python3.6.5 and tested under CentOS Linux release 7.5.1804 (Core); (not tested in Ubuntu 16.0.4 )
+Python dependencies can be found in requirement.txt
 
 Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install it manually:
 
 ```
 sudo yum install python36u-tkinter.x86_64
 ```
-
-Other python dependencies can be found in requirement.txt
 
 ### How to run the code
 
