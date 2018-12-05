@@ -6,7 +6,7 @@ written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (part
 
 Key features:
 
-- Support most document formats including pdf, word docx, powerpoint pptx, txt
+- Multi-format parser supports almost all common document formats including pdf, word docx, powerpoint pptx, txt
 
 - Auto-detection of file language
 
