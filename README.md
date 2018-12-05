@@ -10,7 +10,7 @@ Key features:
 
 - Auto-detection of file language
 
-- NLP based file processing and feature extraction (POS tagging and tokenization, support English, French, German and most European languages)
+- NLP based file content analysis and feature extraction (POS tagging and tokenization, support English, French, German and most European languages)
 
 - Visualization of file clustering results
 
