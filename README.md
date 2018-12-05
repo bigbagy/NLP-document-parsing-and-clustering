@@ -2,7 +2,7 @@
 
 written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu 16.0.4 )
 
-### Drop any document files into  "/src/files" folder and this script will auto analyse and cluster them based on file contents and similarities
+### Drop any document files into  "/src/files" folder and this script will auto analyse and group them according to file content similarities
 
 Key features:
 
