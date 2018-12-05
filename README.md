@@ -10,9 +10,9 @@ Key features:
 
 - Auto-detection of file language
 
-- NLP based file processing with POS tagging and word tokenization
+- NLP based file processing and feature extraction (POS tagging and tokenization)
 
-- Visualization of clustering results
+- Visualization of file clustering results
 
 ### Prerequisites
 
