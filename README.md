@@ -2,7 +2,7 @@
 
 written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu 16.0.4 )
 
-### Drop any document files into  "/src/files" folder and this script will auto analyse and group them according to file content similarities
+### Drop any (large amount of) document files into  "/src/files" folder,  and this script will auto analyse their contents and associate files based on relationship and similarities
 
 Key features:
 
@@ -36,7 +36,8 @@ the program will automatically start and finish the workflow
 
 ### Overall workflow
 
-The overall workflow includes file parser => language detect => process foreign language files => NLP POS tokenization and word filtering => stemming/lemmatization => vecterize word space (tf-idf) => k-means clustering => visualize results
+The overall workflow includes:
+multi-format file parser => language detect => foreign language processing => NLP POS tokenization => key-word filtering => dimention reduction stemming/lemmatization => vecterize word space (tf-idf) => k-means clustering (auto-K selection) => visualize results
 
 Below are step by step detailed descriptions
 
@@ -83,18 +84,12 @@ An analysis.txt report is auto-generated and saved under "/src" folder, it conti
 All files inside files" folder will be processed
 
 Currently most common document formats are surpoorted, including:
-
 .txt (utf-8)
-
 .docx
-
 .pdf
-
 .pptx
-
-incorrect file format may give errors
-
-currently accept English, French and German files, other languages support can be added
+note: unaccepted file format may give errors
+currently accept English, French and German files, other languages support are not tested
 
 ### Demo files for clustering
 
@@ -102,15 +97,15 @@ Some example files are included under "src/files" for easy validation
 
 ### Discussion of future improvements
 
-- This project gives a preliminary demo of finding patterns among unstructured random files using NLP, the code is preliminary and several areas can be improved in future:
+- This project serves as a working demo of document auto-grouping tool which can analyse patterns among large amount of unstructured  files and gain structured insight into file relationships.  files using NLP and unsupervised clustering
 
-- more features could be added to the file parser to support more input file formats, web apis could also be added to allow parsing and clustering of online contents 
+- web APIs such as wiki and twitter APIs can be added to the parser to allow clustering of online contents 
 
-- image OCR text extraction module such as pytesseract could be implemented to the file parser to support parsing text from embedded images in pdf, pptx and word docx
+- text embedded in images are not parsed, image OCR extraction module such as pytesseract could be added to the parser tool to support parsing text from embedded images in pdf, pptx and word docx
 
-- currently the nltk POS tokenizer has native support for English, some other european languages has been tested and it works ok, the support for foreign language can be improved by using dedicated POS tokenizers for particular language
+- the nltk POS tokenizer only has native support for English, French ad German has been tested and seems to work ok, however the support for foreign language can be improved by using dedicated POS tokenizers for specific language
 
-- outlier detection/removal mechanism can be added before K-means to improve clustering accuracy
+- outlier detection/removal can be fine-tuned to improve clustering accuracy
 
-- the current error handling mechanism could be improved, more error testings are needed
+- more sophisticated error handling mechanism could be added
 
