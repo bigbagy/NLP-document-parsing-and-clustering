@@ -100,11 +100,11 @@ Some example files are included under "src/files" for easy validation
 
 ### Discussion of future improvements
 
-- This project serves as a working demo of document auto-grouping tool which can analyse patterns among large amount of unstructured  files and gain structured insight into file relationships.  files using NLP and unsupervised clustering
+This project serves as a working demo of document analyser and auto clustering tool, it can analyse and find patterns among large amount of seemingly unrelated files and gain structured insight into file relationships. The demo is preliminary and more features could be added/improved:
 
-- web APIs such as wiki and twitter APIs can be added to the parser to allow clustering of online contents 
+- web APIs such as wiki and twitter APIs can be added to the parser to allow auto-clustering of online contents
 
-- text embedded in images are not parsed, image OCR extraction module such as pytesseract could be added to the parser tool to support parsing text from embedded images in pdf, pptx and word docx
+- text embedded in images can not be detected by text parser tool, to resolve this, image OCR extraction module such as 'pytesseract' could be added to the parser so it can detect and extract text from embedded images
 
 - nltk POS tokenizer has native support for English;  French ad German files have been tested and works ok, however the support for foreign language can be improved by using dedicated POS tokenizers for specific language
 
