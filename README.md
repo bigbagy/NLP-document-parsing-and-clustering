@@ -6,17 +6,13 @@ Key features:
 
 - Auto-detection of file language
 
-- NLP based POS tagging and word tokenization
+- NLP based file processing with POS tagging and word tokenization
 
-- TF-IDF vecterization
-
-- K-means clustering with auto K selection
-
-- PCA and 2-D visualization
+- Visualization of clustering results in 2-D
 
 ### Prerequisites
 
-written with Python3.6.5 and tested under CentOS Linux release 7.5.1804 (Core) 
+written with Python3.6.5 and tested under CentOS Linux release 7.5.1804 (Core); may also work in Ubuntu 16.0.4 (not tested)
 
 Note: some CentOS (7.5.1804) is not shipped with tkinter(required by pyplot), need to install it manually:
 
@@ -37,6 +33,10 @@ python3.6 run.py
 the program will automatically start and finish the workflow
 
 ### Overall workflow
+
+The overall workflow includes file parser => language detect => process foreign language files => NLP POS tokenization and word filtering => stemming/lemmatization => vecterize word space (tf-idf) => k-means clustering => visualize results
+
+Below are step by step detailed descriptions
 
 Step 1, open and parse all documents located inside "/src/files" folder 
 
@@ -154,17 +154,17 @@ The 2-D visualization gives more intuitive illustration of clustering, nearby fi
 
 ### Discussion of future improvements
 
-This project gives a preliminary demo of what can be done, several areas can be further improved:
+This project gives a preliminary demo of finding patterns among unstructured random files using NLP, the code is preliminary and several areas can be improved in future:
 
-the file parser can be imrpoved to accept more file formats and to include online text sources such as tweeter/wikipedia api
+more features could be added to the file parser to support more input file formats, web apis could also be added to allow parsing and clustering of online contents 
 
-image text extraction module such as pytesseract can be added to the file parser to support parsing text from embedded images in files
+image OCR text extraction module such as pytesseract could be implemented to the file parser to support parsing text from embedded images in pdf, pptx and word docx
 
-currently the nltk POS tokenizer support English, it also works OK for most european languages, but the support for foreign languages still can be improved by adding dedicated modules for foreign languages
-
-the current error handling mechanism could be improved, more error testings are needed
+currently the nltk POS tokenizer has native support for English, some other european languages has been tested and it works ok, the support for foreign language can be improved by using dedicated POS tokenizers for particular language
 
 outlier detection/removal mechanism can be added before K-means to improve clustering accuracy
+
+the current error handling mechanism could be improved, more error testings are needed
 
 
 
