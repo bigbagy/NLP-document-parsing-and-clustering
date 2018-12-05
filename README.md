@@ -8,7 +8,7 @@ Key features:
 
 - Support most document formats including pdf, word docx, powerpoint pptx, txt
 
-- Auto-detection of file language
+- Auto-detection of file language (moderate support for French and German)
 
 - NLP based file processing and feature extraction (POS tagging and tokenization)
 
