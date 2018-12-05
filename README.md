@@ -1,6 +1,6 @@
 # NLP-document-auto-clustering
 
-written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (not tested in Ubuntu)
+written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu)
 
 ### Drop any (large amount of) document files into  "/src/files" folder,  and this script will auto analyse their contents and associate files based on content relationship and similarities
 
