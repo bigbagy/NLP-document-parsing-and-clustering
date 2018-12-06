@@ -1,4 +1,4 @@
-# NLP-document-auto-clustering
+# NLP-document-parsing-clustering
 
 written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (partially tested in Ubuntu)
 
