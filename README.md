@@ -28,7 +28,7 @@ sudo yum install python36u-tkinter.x86_64
 ```
 For Ubuntu:
 ```
-sudo apt install python36u-tkinter.x86_64
+sudo apt-get install python36u-tkinter.x86_64
 ```
 
 ### How to run the code
