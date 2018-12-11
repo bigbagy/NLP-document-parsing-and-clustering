@@ -5,29 +5,25 @@ written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (part
 Key features:
 - Drop document files into  "/src/files" folder,  and this script will auto analyse their contents and associate files based on content similarities
 
-- Multi-format parser supports common document formats including pdf, word docx, powerpoint pptx, txt
+- Multi-format parser supports pdf, word docx, powerpoint pptx, txt document formats
 
-- Auto-detection of file language (support English, French, German and most European languages)
+- Auto-detection of file language (support English, French, German and most other European languages)
 
 - NLP based file content analysis and feature extractions
 
-- Fully un-supervised with auto selection of optimum clustering threshold
+- Fully un-supervised with auto selection of optimum clustering parameters based on threshold
 
 - Visualization of file clustering results
 
 ### Python Dependencies and Prerequisites
 
-Python 3.6.5, dependencies can be found in requirement.txt
+Python 3.6.5 dependencies can be found in requirement.txt
 
 Note: some Linux (such as CentOS 7.5.1804) is not shipped with tkinter(required by pyplot), need to install manually in CLI:
 
 For CentOS:
 ```
 sudo yum install python36u-tkinter.x86_64
-```
-For Ubuntu:
-```
-sudo apt-get install python36u-tkinter.x86_64
 ```
 
 ### How to run the code
@@ -42,12 +38,12 @@ the program will automatically start and finish the workflow
 
 ### Overall workflow
 
-The overall workflow includes:
-multi-format file parser => language detect => foreign language processing => NLP POS tokenization => key-word filtering => dimention reduction stemming/lemmatization => vecterize word space (tf-idf) => k-means clustering (auto-K selection) => visualize results
+The overall workflow is as follows:
+multi-format file parser loadup and parse files=> language detect => foreign language processing => NLP POS tokenization => key-word filtering => dimention reduction stemming/lemmatization => vecterize word space (tf-idf) => k-means clustering (auto-K selection) => visualize results
 
-Below are step by step detailed descriptions
+Below are step by step descriptions
 
-Step 1, a dedicated parser is used to parse any text from txt, docx, pptx, pdf files, return plain texts and file names
+Step 1, a dedicated parser is used to parse any text from txt, docx, pptx, pdf files, return plain texts and file names, the parser uses existing libraries to parse pdf and docx files, more features could be added to the parser to support parsing from other file formats, or parsing image/audio files
 
 Step 2, auto-detect language of file content using langdetect
 
@@ -57,17 +53,17 @@ option 1. remove foreign languages and only keep English files for clustering st
 option 2. perform separate clustering study, one for each language
 Option 3. translate foreign language text to English (using goslate or similar package), then treat the traslated content as English text
 Option 4. use word embedding to convert word space to abstract vector space (such as Word2Vec), then cluster files based on abstract vector space
-currently support option 1, i.e. only cluster English files.  More features could be added in future to support other options.
+current demo version supports option 1, i.e. only cluster English files.  More features could be added in future to support other options.
 
-Step 4, tokenize plain text with NLP tokenizer, use word-tokens to filter out the key words ("proper nouns" NNP as key words)
+Step 4, tokenize plain text with NLP tokenizer, filter out keywords using word-tokens("proper nouns" NNP as key words)
 
-Step 5, reduce word-space by normalizing proper-noun words to stem form, first stemming, then lemmatization
+Step 5, reduce word-space by normalizing words to stem form, first stemming, then lemmatization
 
-Step 6, form overall corpus by combining file keywords, then vectorize word-space via tf-idf
+Step 6, form overall corpus by combining normalized keywords, then vectorize word-space via tf-idf
 
-Step 7, auto select optimum K value using elbow method, with a pre-set threshold on elbow gradient
+Step 7, train K-means model to find optimum K value using elbow method, with a pre-set threshold on elbow gradient
 
-apply K-Means clustering with optimum k and find category label for each file
+apply K-means clustering with optimum k and find category label for each file
 
 Note: The demo files have number of features less than 1000, dimension reduction is not necessary. If large number of features cause effeciency issues, PCA could be applied prior to K-means to reduce feature dimensions
 
