@@ -5,7 +5,7 @@ written in Python3.6.5 and tested in CentOS Linux release 7.5.1804 (Core); (part
 Key features:
 - Drop document files into  "/src/files" folder,  and this script will auto analyse their contents and associate files based on content similarities
 
-- Multi-format parser supports most common document formats including pdf, word docx, powerpoint pptx, txt
+- Multi-format parser supports common document formats including pdf, word docx, powerpoint pptx, txt
 
 - Auto-detection of file language (support English, French, German and most European languages)
 
